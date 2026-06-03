@@ -1,4 +1,7 @@
-General styles * {
+/* stylelint-disable selector-class-pattern */
+
+/* General styles */
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -48,7 +51,7 @@ body {
   margin-bottom: 15px;
 }
 
-@media screen and (max-width: 576px) {
+@media (width <= 576px) {
   .main-info,
   .contact_info_container {
     flex-direction: column;
@@ -66,7 +69,9 @@ body {
     margin-right: 0;
   }
 }
-Contact info styles .contact-info__header,
+
+/* Contact info styles */
+.contact-info__header,
 .contact-info__sub-header {
   text-align: center;
 }
@@ -94,10 +99,10 @@ Contact info styles .contact-info__header,
 }
 
 .contact-info__item {
+  display: flex;
+  justify-content: flex-start;
   color: var(--secondary-text-color);
   text-decoration: none;
-  display: flex;
-  justify-content: start;
 }
 
 .contact-info__item:not(:last-child) {
@@ -105,14 +110,10 @@ Contact info styles .contact-info__header,
 }
 
 .contact-info__item-icon-wrapper {
-  margin-right: 10px;
-  width: 20px;
   display: flex;
   justify-content: center;
-}
-
-.contact-info__item-icon path {
-  fill: var(--icon-color);
+  width: 20px;
+  margin-right: 10px;
 }
 
 .contact-info__item-icon {
@@ -120,24 +121,29 @@ Contact info styles .contact-info__header,
   vertical-align: text-bottom;
 }
 
+.contact-info__item-icon path {
+  fill: var(--icon-color);
+}
+
 .contact-info__avatar {
-  border-radius: 50%;
   width: 100px;
   height: 100px;
+  border: 3px solid var(--text-decoration-color);
+  border-radius: 50%;
   object-fit: cover;
-  border: 3px solid;
-  border-color: var(--text-decoration-color);
 }
-Intro and skills styles .intro {
+
+/* Intro and skills styles */
+.intro {
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
 }
 
 .intro__icon-wrapper {
-  margin-right: 30px;
-  width: 30px;
   display: flex;
   justify-content: center;
+  width: 30px;
+  margin-right: 30px;
 }
 
 .intro__icon {
@@ -156,61 +162,63 @@ Intro and skills styles .intro {
 
 .skills__header {
   color: var(--secondary-text-color);
-  text-align: center;
   margin-bottom: 15px;
+  text-align: center;
 }
 
 .skills__text {
   color: var(--secondary-text-color);
   text-align: justify;
 }
-Experience and additional info styles .experiences {
+
+/* Experience and additional info styles */
+.experiences {
   flex: 1 1 60%;
   margin-right: 50px;
 }
 
 .experiences__header {
   color: var(--secondary-text-color);
-  text-align: left;
   margin-bottom: 20px;
+  text-align: left;
 }
 
 .experiences__company-header-durability {
   color: var(--durability-text-color);
-  text-align: left;
   margin-bottom: 10px;
   font-size: 15px;
+  text-align: left;
 }
 
 .experiences__company-header-name {
   color: var(--primary-text-color);
+  margin-bottom: 20px;
+  text-align: left;
   text-decoration-color: var(--text-decoration-color);
   text-decoration-line: underline;
-  text-align: left;
-  margin-bottom: 20px;
 }
 
 .experiences__company-project {
-  margin-left: 15px;
   margin-bottom: 25px;
+  margin-left: 15px;
 }
 
 .experiences__company-project-role {
   color: var(--durability-text-color);
-  text-align: left;
   margin-bottom: 10px;
   font-size: 15px;
+  text-align: left;
 }
 
 .experiences__company-project-name {
   color: var(--primary-text-color);
-  text-align: left;
   margin-bottom: 10px;
+  text-align: left;
 }
 
 .experiences__company-project-responsibilities {
-  color: var(--secondary-text-color);
   padding-left: 20px;
+  color: var(--secondary-text-color);
 }
 
 .additional-info {
@@ -223,21 +231,21 @@ Experience and additional info styles .experiences {
 
 .additional-info__education-header {
   color: var(--secondary-text-color);
-  text-align: left;
   margin-bottom: 20px;
+  text-align: left;
 }
 
 .additional-info__education-university-durability {
   color: var(--durability-text-color);
-  text-align: left;
   margin-bottom: 10px;
   font-size: 15px;
+  text-align: left;
 }
 
 .additional-info__education-university-speciality {
   color: var(--primary-text-color);
-  text-align: left;
   margin-bottom: 10px;
+  text-align: left;
 }
 
 .additional-info__education-university-name {
@@ -250,8 +258,8 @@ Experience and additional info styles .experiences {
 
 .additional-info__languages-header {
   color: var(--secondary-text-color);
-  text-align: left;
   margin-bottom: 20px;
+  text-align: left;
 }
 
 .additional-info__languages-item {
